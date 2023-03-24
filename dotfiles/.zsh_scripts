@@ -1,0 +1,7 @@
+export PATH=/home/tudny/.local/share/JetBrains/Toolbox/scripts:$PATH
+
+alias zpp='cd /home/tudny/Documents/UW/MIMUW/ZPP'
+
+function dark-chrome() {
+    bash -c "$(curl -fsSL "https://raw.githubusercontent.com/felipecassiors/dotfiles/master/scripts/enable_chrome_dark_mode.sh")"
+}

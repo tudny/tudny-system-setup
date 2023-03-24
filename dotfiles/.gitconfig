@@ -1,0 +1,7 @@
+[commit]
+	gpgsign = true
+[user]
+	email = aleksanderwt@gmail.com
+	name = Aleksander Tudruj
+[alias]
+	s = status
