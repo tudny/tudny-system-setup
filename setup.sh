@@ -5,9 +5,9 @@ sudo apt update -y && sudo apt upgrade -y
 # Install packages
 if [ -f apts.list ]; then
     echo "Installing packages from apts.list"
-    xargs sudo apt install <apts.list
+    xargs sudo apt install -y <apts.list
 fi
-
+d
 # Install Bazel
 sudo apt install apt-transport-https curl gnupg -y
 curl -fsSL https://bazel.build/bazel-release.pub.gpg | gpg --dearmor >bazel-archive-keyring.gpg
@@ -38,9 +38,10 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugi
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 
 # Install GHcup
-sudo apt install build-essential curl libffi-dev libffi6 libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5
+sudo apt install build-essential curl libffi-dev libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5
+sudo apt --fix-broken install
+sudo apt install build-essential curl libffi-dev libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
-ghcup install 8.10.4
 
 # Install gh
 type -p curl >/dev/null || (sudo apt update && sudo apt install curl -y)
@@ -58,9 +59,9 @@ mkdir -p ~/Documents/UW/MIMUW/WBO
 mkdir -p ~/Documents/UW/MIMUW/WNUMAD
 
 # Move dotfiles
-mv dotfiles/.zshrc ~/
-mv dotfiles/.zsh_scripts ~/
-mv dotfiles/.gitconfig ~/
+cp dotfiles/.zshrc ~/
+cp dotfiles/.zsh_scripts ~/
+cp dotfiles/.gitconfig ~/
 
 # Remind to setup .ssh and gpg
 echo "Don't forget to setup .ssh and gpg!"
