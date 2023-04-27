@@ -7,7 +7,7 @@ if [ -f apts.list ]; then
     echo "Installing packages from apts.list"
     xargs sudo apt install -y <apts.list
 fi
-d
+
 # Install Bazel
 sudo apt install apt-transport-https curl gnupg -y
 curl -fsSL https://bazel.build/bazel-release.pub.gpg | gpg --dearmor >bazel-archive-keyring.gpg
