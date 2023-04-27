@@ -5,7 +5,7 @@ sudo apt update -y && sudo apt upgrade -y
 # Install packages
 if [ -f apts.list ]; then
     echo "Installing packages from apts.list"
-    xargs sudo apt install <apts.list
+    xargs sudo apt install -y <apts.list
 fi
 
 # Install Bazel

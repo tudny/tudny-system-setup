@@ -1,7 +1,17 @@
 export PATH=/home/tudny/.local/share/JetBrains/Toolbox/scripts:$PATH
 
 alias zpp='cd /home/tudny/Documents/UW/MIMUW/ZPP'
+alias jpp='cd /home/tudny/Documents/UW/MIMUW/JPP'
+alias jnp='cd /home/tudny/Documents/UW/MIMUW/JNP3'
+alias wbo='cd /home/tudny/Documents/UW/MIMUW/WBO'
+alias przykry='cd /home/tudny/Documents/UW/MIMUW/MNUMAD'
+alias mimuw='cd /home/tudny/Documents/UW/MIMUW'
+
+function hl() {
+    pygmentize "$1"
+}
 
 function dark-chrome() {
     bash -c "$(curl -fsSL "https://raw.githubusercontent.com/felipecassiors/dotfiles/master/scripts/enable_chrome_dark_mode.sh")"
 }
+
